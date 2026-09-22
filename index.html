@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FORJA | Seu treino, no seu ritmo</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="login-screen" id="loginScreen">
+		<div class="login-photo"></div>
+		<div class="login-shade"></div>
+		<div class="login-content">
+			<a class="brand brand-light" href="#"><span class="brand-mark">F</span> FORJA</a>
+			<div class="login-copy">
+				<p class="eyebrow">DISCIPLINA É UMA DECISÃO DIÁRIA</p>
+				<h1>Seu próximo<br><em>nível começa aqui.</em></h1>
+				<p class="login-intro">Treinos inteligentes, progresso visível e uma rotina que acompanha o seu ritmo.</p>
+			</div>
+			<form class="login-card" id="loginForm">
+				<p class="card-kicker">ÁREA DO ATLETA</p>
+				<h2>Bem-vindo de volta</h2>
+				<label for="email">E-mail</label>
+				<input id="email" type="email" placeholder="voce@email.com" required>
+				<label for="password">Senha</label>
+				<div class="password-wrap"><input id="password" type="password" placeholder="••••••••" required><button type="button" class="show-password" id="showPassword" aria-label="Mostrar senha">◉</button></div>
+				<div class="login-options"><label class="checkbox-label"><input type="checkbox"> <span>Lembrar de mim</span></label><a href="#">Esqueci minha senha</a></div>
+				<button class="button button-primary full-width" type="submit">Entrar no painel <span>↗</span></button>
+				<p class="create-account">Ainda não tem uma conta? <a href="#">Comece agora</a></p>
+			</form>
+			<p class="login-footer">© 2024 FORJA TRAINING <span>•</span> Feito para quem não negocia com seus objetivos.</p>
+		</div>
+	</section>
+
+	<main class="app-shell" id="appShell">
+		<aside class="sidebar">
+			<a class="brand" href="#dashboard"><span class="brand-mark">F</span> FORJA</a>
+			<div class="user-mini"><div class="avatar">MS</div><div><strong>Mateus Silva</strong><span>Plano Pro · ativo</span></div><span class="status-dot"></span></div>
+			<nav class="main-nav" aria-label="Navegação principal">
+				<p class="nav-label">MENU PRINCIPAL</p>
+				<a class="nav-link active" href="#dashboard"><span>◫</span> Visão geral</a>
+				<a class="nav-link" href="#treino"><span>▦</span> Meu treino</a>
+				<a class="nav-link" href="#progresso"><span>↗</span> Meu progresso</a>
+				<a class="nav-link" href="#habitos"><span>✓</span> Hábitos</a>
+				<p class="nav-label space-top">CONTA</p>
+				<a class="nav-link" href="#renovar"><span>↻</span> Meu plano</a>
+				<a class="nav-link" href="#"><span>⚙</span> Configurações</a>
+			</nav>
+			<div class="sidebar-bottom"><div class="quote-mark">“</div><p>O corpo alcança o que a mente acredita.</p><span>— FORJA DAILY</span></div>
+			<button class="logout" id="logoutButton"><span>←</span> Sair da conta</button>
+		</aside>
+
+		<section class="content-area">
+			<header class="topbar"><div class="mobile-brand"><span class="brand-mark">F</span> FORJA</div><div class="topbar-tools"><button class="icon-button" aria-label="Notificações">♧<i></i></button><div class="top-user"><div class="avatar small">MS</div><span>Mateus Silva</span><b>⌄</b></div></div></header>
+
+			<div class="page-content" id="dashboard">
+				<section class="welcome-row"><div><p class="eyebrow orange">QUARTA-FEIRA, 18 DE SETEMBRO</p><h1>Bom dia, Mateus <span>✦</span></h1><p class="muted">Pronto para conquistar mais uma sessão?</p></div><button class="button button-dark" id="startWorkout">Começar treino <span>→</span></button></section>
+
+				<section class="stats-grid"><article class="stat-card dark-card"><div class="stat-icon orange-icon">♨</div><p>SEQUÊNCIA ATUAL</p><strong>12 <small>dias</small></strong><span class="trend up">↑ 4 dias este mês</span><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i class="current"></i></div></article><article class="stat-card"><div class="stat-icon green-icon">✓</div><p>TREINOS NO MÊS</p><strong>18 <small>/ 22</small></strong><span class="trend">82% de consistência</span><div class="progress-line"><i style="width:82%"></i></div></article><article class="stat-card"><div class="stat-icon blue-icon">↗</div><p>EVOLUÇÃO TOTAL</p><strong>+14,8<small>%</small></strong><span class="trend up">↑ 2,4% vs. mês anterior</span><div class="progress-line blue-line"><i style="width:68%"></i></div></article><article class="stat-card"><div class="stat-icon purple-icon">⌁</div><p>PRÓXIMA AVALIAÇÃO</p><strong>09 <small>dias</small></strong><span class="trend">Avaliação mensal</span><div class="date-mark">09 / OUT</div></article></section>
+
+				<section class="dashboard-grid">
+					<article class="panel calendar-panel" id="calendario"><div class="panel-heading"><div><p class="eyebrow orange">SUA ROTINA</p><h2>Calendário de treinos</h2></div><div class="calendar-actions"><button class="circle-button" id="prevMonth">‹</button><strong id="monthLabel">Setembro 2024</strong><button class="circle-button" id="nextMonth">›</button></div></div><div class="calendar-week"><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span><span>DOM</span></div><div class="calendar-grid" id="calendarGrid"></div><div class="calendar-legend"><span><i class="legend-dot done"></i> Treino concluído</span><span><i class="legend-dot planned"></i> Planejado</span><span><i class="legend-dot today"></i> Hoje</span></div></article>
+					<article class="panel next-panel" id="treino"><div class="panel-heading"><div><p class="eyebrow orange">PRÓXIMA SESSÃO</p><h2>Treino de hoje</h2></div><button class="text-button">Ver planilha <span>→</span></button></div><div class="workout-title"><div class="workout-symbol">UPPER<br><b>A</b></div><div><h3>Upper Body · Força</h3><p>Peito, ombro e tríceps <span>•</span> 6 exercícios</p></div></div><div class="exercise-list"><div><span class="exercise-number">01</span><strong>Supino reto com barra</strong><small>4 séries × 8 repetições</small><button class="edit-exercise" data-exercise="Supino reto com barra">✎</button></div><div><span class="exercise-number">02</span><strong>Desenvolvimento militar</strong><small>3 séries × 10 repetições</small><button class="edit-exercise" data-exercise="Desenvolvimento militar">✎</button></div><div><span class="exercise-number">03</span><strong>Tríceps na polia</strong><small>3 séries × 12 repetições</small><button class="edit-exercise" data-exercise="Tríceps na polia">✎</button></div></div><button class="button button-outline full-width" id="editWorkout">Editar planilha <span>✎</span></button></article>
+				</section>
+
+				<section class="lower-grid"><article class="panel progress-panel" id="progresso"><div class="panel-heading"><div><p class="eyebrow orange">ACOMPANHE DE PERTO</p><h2>Evolução semanal</h2></div><select aria-label="Período da evolução"><option>Últimas 6 semanas</option><option>Últimos 3 meses</option></select></div><div class="chart-wrap"><div class="y-axis"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div><div class="chart"><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><svg viewBox="0 0 620 190" preserveAspectRatio="none" aria-label="Gráfico de evolução"><defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f26322" stop-opacity=".28"/><stop offset="1" stop-color="#f26322" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0,145 C35,132 65,141 100,112 S160,120 205,96 S264,106 310,82 S370,88 415,61 S470,72 515,43 S570,56 620,21 L620,190 L0,190 Z"/><path class="chart-line" d="M0,145 C35,132 65,141 100,112 S160,120 205,96 S264,106 310,82 S370,88 415,61 S470,72 515,43 S570,56 620,21"/><circle cx="620" cy="21" r="5"/></svg><div class="x-axis"><span>SEM 01</span><span>SEM 02</span><span>SEM 03</span><span>SEM 04</span><span>SEM 05</span><span>SEM 06</span></div></div></div><div class="chart-summary"><strong>+14,8%</strong><span>de evolução desde o início do plano</span><span class="up-badge">↑ 2,4% esta semana</span></div></article><article class="panel habits-panel" id="habitos"><div class="panel-heading"><div><p class="eyebrow orange">ALÉM DO TREINO</p><h2>Hábitos da semana</h2></div><button class="circle-button plus-button" id="addHabit" aria-label="Adicionar hábito">+</button></div><p class="muted">Pequenas ações, grandes mudanças.</p><div class="habit-list" id="habitList"><label class="habit-item checked"><input type="checkbox" checked><span class="custom-check">✓</span><span>Beber 3L de água</span><b>7/7</b></label><label class="habit-item"><input type="checkbox"><span class="custom-check">✓</span><span>Dormir 8 horas</span><b>5/7</b></label><label class="habit-item"><input type="checkbox"><span class="custom-check">✓</span><span>Alongar por 10 min</span><b>4/7</b></label><label class="habit-item"><input type="checkbox"><span class="custom-check">✓</span><span>Sem açúcar</span><b>3/7</b></label></div><button class="text-button add-habit-text" id="addHabitText">+ Adicionar novo hábito</button></article></section>
+
+				<section class="renew-banner" id="renovar"><div><p class="eyebrow orange">SEU PLANO PRO</p><h2>Você está no caminho certo.</h2><p>Seu plano atual termina em <strong>23 dias</strong>. Renove agora e mantenha o ritmo sem interrupções.</p></div><div class="renew-side"><span>Próxima cobrança <strong>18 OUT 2024</strong></span><button class="button button-orange" id="renewButton">Renovar plano <span>→</span></button></div></section>
+				<footer><span>FORJA TRAINING PLATFORM</span><span>Suporte <a href="#">Central de ajuda</a> <i>•</i> Privacidade</span></footer>
+			</div>
+		</section>
+	</main>
+	<div class="toast" id="toast" role="status"></div>
+	<script src="site.js"></script>
+</body>
+</html>
